@@ -131,6 +131,7 @@ void list(tree_node_t *root, int main_index)
         list(root->right[main_index], main_index);
     }
 }
+
 //
 // list the people with a given zip code
 //
@@ -165,7 +166,6 @@ void findZipCode(tree_node_t *root, char *zip_code)
 int main(int argc, char **argv)
 {
     double dt;
-
     // process the command line arguments
     if (argc < 3)
     {
@@ -252,7 +252,7 @@ int main(int argc, char **argv)
             list(roots[main_index], main_index); // place your code here to traverse, in order, the tree with number main_index
         }
         // place your own options here
-        if (strcmp(argv[i], "-find") == 0)
+        else if (strcmp(argv[i], "-find") == 0)
         {
             printf("List of people with the zip code: %s\n", argv[i + 1]);
             findZipCode(roots[1], argv[i + 1]);
