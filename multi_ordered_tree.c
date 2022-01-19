@@ -59,7 +59,7 @@ int compare_tree_nodes(tree_node_t *node1, tree_node_t *node2, int main_idx)
 
 void tree_insert(tree_node_t **roots, tree_node_t *node, int main_index)
 {
-    /* If the tree is empty, return a new Node */
+    /* If the tree is empty, the tree will be to equal the node and will not return any value */
     if (roots[main_index] == NULL)
     {
         roots[main_index] = node;
@@ -96,7 +96,7 @@ tree_node_t *find(tree_node_t *root, tree_node_t node, int main_index)
 }
 
 //
-// tree depdth
+// tree depth
 //
 
 int tree_depth(tree_node_t *root, int main_index)
