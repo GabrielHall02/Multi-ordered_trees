@@ -10,7 +10,7 @@ AUX_H_FILES=random_knuth.h AED_2021_A02.h
 
 clean:
 	rm -fv a.out
-	rm -fv multi_ordered_tree solution_multi_ordered_tree
+	rm -fv multi_ordered_tree solution_multi_ordered_tree data_multi_ordered_tree
 
 
 multi_ordered_tree:		multi_ordered_tree.c $(AUX_C_FILES) $(AUX_H_FILES)
@@ -18,3 +18,6 @@ multi_ordered_tree:		multi_ordered_tree.c $(AUX_C_FILES) $(AUX_H_FILES)
 
 solution_multi_ordered_tree:	solution_multi_ordered_tree.c $(AUX_C_FILES) $(AUX_H_FILES)
 	cc -Wall -O2 solution_multi_ordered_tree.c $(AUX_C_FILES) -o solution_multi_ordered_tree
+
+data_multi_ordered_tree:	data_multi_ordered_tree.c $(AUX_C_FILES) $(AUX_H_FILES)
+	cc -Wall -O2 data_multi_ordered_tree.c $(AUX_C_FILES) -o data_multi_ordered_tree
